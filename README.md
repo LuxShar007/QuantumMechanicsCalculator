@@ -76,8 +76,7 @@ Built with a focus on computational efficiency and academic precision.
 **Sharvin Mhatre**  
 * **Education:** B.Tech in Electronics and Computer Science Engineering  
 * **Interests:** Robotics, Arduino-based projects, and Quantum Mechanics  
-* **Aspiration:** Research Career in Robotics and Indian Air Force Candidate  
-
+* **Aspiration:** Research Career in Robotics
 ---
 <div align="center">
   Built with ❤️ for the Engineering Community. **Star this repo if it helped you!** ⭐
