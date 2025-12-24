@@ -60,7 +60,7 @@ Built with a focus on computational efficiency and academic precision.
     cd Quantum-Mechanics-Calculator
     ```
 3.  **Run the application:**
-    *(Insert your specific run command here, e.g., `./main` or `python app.py`)*
+    npm start
 
    OR
 
