@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css');
+
+@import "tailwindcss";
+
+@theme {
+  --color-science-50: #f5f3ff;
+  --color-science-100: #ede9fe;
+  --color-science-200: #ddd6fe;
+  --color-science-300: #c4b5fd;
+  --color-science-400: #a78bfa;
+  --color-science-500: #8b5cf6;
+  --color-science-600: #7c3aed;
+  --color-science-700: #6d28d9;
+  --color-science-800: #5b21b6;
+  --color-science-900: #4c1d95;
+  --color-science-950: #2e1065;
+
+  /* Retain Cream for Light Mode just in case, but user focused on Black */
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f7f5f0;
+  --color-cream-200: #e8e6e1;
+
+  /* Pitch Black Theme Palette */
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #121212;
+  /* Material Dark Surface */
+  --color-dark-900: #0a0a0a;
+  /* Almost Black */
+  --color-dark-950: #000000;
+  /* PURE BLACK */
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Force Pure Black in Dark Mode */
+    @apply bg-[#fdfbf7] dark:bg-black text-neutral-900 dark:text-neutral-50 font-sans antialiased transition-colors duration-300;
+  }
+
+  /* Scrollbar Styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-dark-200 dark:bg-dark-800 rounded-full hover:bg-dark-300 dark:hover:bg-dark-700 transition-colors;
+  }
+}
+
+/* KaTeX Visibility - High Contrast */
+.katex {
+  font-size: 1.1em !important;
+}
+
+/* Light Mode: Math is Dark/Black */
+.katex,
+.katex-display {
+  color: #000000 !important;
+}
+
+/* Dark Mode: Math is Pure White */
+.dark .katex,
+.dark .katex-display {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Ensure fractions and lines are visible */
+.dark .katex .frac-line {
+  border-color: #ffffff !important;
+}
+
+.dark .katex .sqrt-line {
+  border-color: #ffffff !important;
+}
